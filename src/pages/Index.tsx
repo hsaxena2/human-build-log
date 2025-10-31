@@ -1,12 +1,32 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import Hero from "@/components/Hero";
+import CTAButtons from "@/components/CTAButtons";
+import WhySection from "@/components/WhySection";
+import PlanSection from "@/components/PlanSection";
+import CommunitySection from "@/components/CommunitySection";
+import JoinSection from "@/components/JoinSection";
+import AboutSection from "@/components/AboutSection";
+import NewsletterSection from "@/components/NewsletterSection";
+import Footer from "@/components/Footer";
 
 const Index = () => {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-background">
-      <div className="text-center">
-        <h1 className="mb-4 text-4xl font-bold">Welcome to Your Blank App</h1>
-        <p className="text-xl text-muted-foreground">Start building your amazing project here!</p>
+    <div className="min-h-screen">
+      <Hero />
+      <div className="container mx-auto max-w-4xl px-6 pb-8">
+        <CTAButtons 
+          primaryText="Join the CTO Community"
+          primaryHref="#community"
+          secondaryText="Connect with Me"
+          secondaryHref="mailto:himanshusaxena97@gmail.com"
+        />
       </div>
+      <WhySection />
+      <PlanSection />
+      <CommunitySection />
+      <JoinSection />
+      <AboutSection />
+      <NewsletterSection />
+      <Footer />
     </div>
   );
 };
