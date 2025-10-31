@@ -5,8 +5,8 @@ const NewsletterSection = () => {
   return (
     <section className="py-16 border-t border-border">
       <div className="container mx-auto max-w-4xl px-6">
-        <h2 className="text-4xl font-bold mb-8">Stay in the Loop</h2>
-        <p className="text-lg leading-relaxed mb-8">
+        <h2 className="mb-8">Stay in the Loop</h2>
+        <p className="text-lg md:text-xl leading-relaxed mb-8">
           I'll share reflections, essays, and stories as this journey unfolds.
           If you want to follow along — or be part of it — join the list below.
         </p>
@@ -14,9 +14,9 @@ const NewsletterSection = () => {
           <Input 
             type="email" 
             placeholder="your@email.com" 
-            className="text-base"
+            className="text-base h-12 border-2"
           />
-          <Button type="submit" size="lg" className="text-base whitespace-nowrap">
+          <Button type="submit" variant="premium" size="lg" className="whitespace-nowrap">
             Subscribe
           </Button>
         </form>

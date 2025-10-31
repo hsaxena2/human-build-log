@@ -5,15 +5,16 @@ interface CTAButtonsProps {
   primaryHref: string;
   secondaryText?: string;
   secondaryHref?: string;
+  variant?: "default" | "premium";
 }
 
-const CTAButtons = ({ primaryText, primaryHref, secondaryText, secondaryHref }: CTAButtonsProps) => {
+const CTAButtons = ({ primaryText, primaryHref, secondaryText, secondaryHref, variant = "premium" }: CTAButtonsProps) => {
   return (
-    <div className="flex flex-col sm:flex-row gap-4 mt-8">
+    <div className="flex flex-col sm:flex-row gap-4 mt-8 animate-fade-in" style={{ animationDelay: "0.3s" }}>
       <Button 
         asChild 
         size="lg"
-        className="text-base"
+        variant={variant}
       >
         <a href={primaryHref}>{primaryText}</a>
       </Button>
@@ -22,7 +23,6 @@ const CTAButtons = ({ primaryText, primaryHref, secondaryText, secondaryHref }: 
           asChild 
           variant="outline" 
           size="lg"
-          className="text-base"
         >
           <a href={secondaryHref}>{secondaryText}</a>
         </Button>
